@@ -56,3 +56,20 @@ src/
 ├── App.jsx
 ├── index.js
 └── index.css
+
+## 📦 Installation & Run Locally
+
+- **Clone the repository**
+```bash
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
+
+- **Install dependencies**
+```bash
+npm install
+
+- **Start the development server**
+```bash
+npm run dev
+
+
