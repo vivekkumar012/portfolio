@@ -1,12 +1,58 @@
-# React + Vite
+# 🌐 Personal Portfolio - React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio website, built using **React.js**!  
+This project showcases my work, skills, resume, and projects in an interactive and modern layout. It features animated particle backgrounds, smooth routing, and a responsive design.
 
-Currently, two official plugins are available:
+![Portfolio Preview](https:////.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🖼️ Responsive design across all devices
+- ⚛️ Built with React.js and React Router
+- 🎨 TailwindCSS for modern and fast UI styling
+- 🧩 Interactive particles background (only on Home)
+- 🔗 Easy-to-navigate pages:
+  - Home
+  - About Me
+  - Skills
+  - Resume
+  - Portfolio
+  - Contact
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js**
+- **TailwindCSS**
+- **React Router DOM**
+- **React Icons**
+- **React Tsparticles** – for animated particle background
+- **Custom Theme** using CSS Variables
+
+---
+
+## 📂 Folder Structure
+
+```bash
+src/
+│
+├── components/
+│   └── Navbar.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Skills.jsx
+│   ├── Resume.jsx
+│   ├── Portfolio.jsx
+│   └── Contact.jsx
+│
+├── utils/
+│   └── Particles.js
+│
+├── App.jsx
+├── index.js
+└── index.css
