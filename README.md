@@ -57,24 +57,6 @@ src/
 ├── index.js
 └── index.css
 
----
-
-## 📦 Installation & Run Locally
-
-# 1. Clone the repository
-git clone https://github.com/your-username/your-portfolio.git
-
-# 2. Navigate into the project directory
-cd your-portfolio
-
-# 3. Install dependencies
-npm install
-
-# 4. Start the development server
-npm start
-
-# 5. Open in browser at:
-http://localhost:3000
 
 
 
