@@ -5,6 +5,10 @@ import { Animate } from "react-simple-animate";
 import { DiApple, DiAndroid } from "react-icons/di";
 import { FaDev, FaDatabase } from "react-icons/fa";
 
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
+
 const personalDetails = [
   { label: "Name", value: "Vivek Kumar" },
   { label: "Age", value: "21" },
@@ -17,6 +21,16 @@ const jobSummary =
   "Seasoned and independent Full Stack Developer with 1 year of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development, proactive feature optimization, and relentless debugging. Very passionate about making Backend as well as Frontend of any websites. I solved Around 1000+ DSA Problems Across all the Platforms like LeetCode, CodeChef, CodeForces and GFG";
 
 const About = () => {
+  const location = useLocation();
+  const [playAnimation, setPlayAnimation] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation whenever route is /about
+    setPlayAnimation(false);
+    const timer = setTimeout(() => setPlayAnimation(true), 10); // delay to re-trigger Animate
+    return () => clearTimeout(timer);
+  }, [location.pathname]); // runs when route changes
+
   return (
     <section id="about" className="w-full px-5 py-8">
       <PageHeaderContent headerText="About Me" icon={<BsInfoCircleFill size={40} />} />
@@ -40,7 +54,7 @@ const About = () => {
           </Animate>
 
           <Animate
-            play
+            play={playAnimation}
             duration={1.5}
             delay={1}
             start={{ transform: "translateX(500px)" }}

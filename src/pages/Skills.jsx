@@ -5,7 +5,20 @@ import { Animate, AnimateKeyframes } from "react-simple-animate";
 import { skillsData } from "../utils/utils";
 import PageHeaderContent from '../components/Pageheader'
 
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 const Skills = () => {
+  const location = useLocation();
+    const [playAnimation, setPlayAnimation] = useState(false);
+  
+    useEffect(() => {
+      // Trigger animation whenever route is /about
+      setPlayAnimation(false);
+      const timer = setTimeout(() => setPlayAnimation(true), 10); // delay to re-trigger Animate
+      return () => clearTimeout(timer);
+    }, [location.pathname]); // runs when route changes
+
   return (
     <section id="skills" className="w-full px-5 py-8">
       <PageHeaderContent
@@ -17,7 +30,7 @@ const Skills = () => {
         {skillsData.map((item, i) => (
           <div key={i} className="flex flex-col items-center flex-1">
             <Animate
-              play
+              play={playAnimation}
               duration={1}
               delay={0.3}
               start={{ transform: "translateX(-200px)" }}
