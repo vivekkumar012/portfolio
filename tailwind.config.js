@@ -11,6 +11,8 @@ export default {
         'yellow-theme-nav-bg': 'var(--yellow-theme-nav-background-color)',
         'yellow-theme-main-color': 'var(--yellow-theme-main-color)',
         'yellow-theme-main-link': 'var(--yellow-theme-main-color)',
+        'yellow-main': 'var(--yellow-theme-main-color)',
+        'yellow-sub': 'var(--yellow-theme-sub-text-color)',
       },
       animation: {
         typing: 'typingEffectAnimation 2.5s steps(20, end)',
