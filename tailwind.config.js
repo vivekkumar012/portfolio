@@ -12,6 +12,18 @@ export default {
         'yellow-theme-main-color': 'var(--yellow-theme-main-color)',
         'yellow-theme-main-link': 'var(--yellow-theme-main-color)',
       },
+      animation: {
+        typing: 'typingEffectAnimation 2.5s steps(20, end)',
+       },
+      keyframes: {
+        typingEffectAnimation: {
+          from: { width: '0' },
+          to: { width: '100%' },
+        },
+      },
+      height: {
+        'screen-minus-80': 'calc(100% - 80px)',
+      },
     },
   },
   plugins: [],

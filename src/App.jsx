@@ -34,14 +34,16 @@ function App() {
 
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="h-screen-minus-80">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </div>
   );
 }
