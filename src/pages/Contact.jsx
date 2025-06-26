@@ -6,8 +6,20 @@ import { Animate } from "react-simple-animate";
 import { FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+
+  const location = useLocation();
+  const [playAnimation, setPlayAnimation] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation whenever route is /about
+    setPlayAnimation(false);
+    const timer = setTimeout(() => setPlayAnimation(true), 10); // delay to re-trigger Animate
+    return () => clearTimeout(timer);
+  }, [location.pathname]); // runs when route changes
   
   return (
     <section id="contact" className="py-10 px-4 sm:px-8 md:px-16 text-white">
@@ -18,7 +30,7 @@ const Contact = () => {
 
       <div className="mt-8">
         <Animate
-          play
+          play={playAnimation}
           duration={1}
           delay={0}
           start={{ transform: "translateX(-200px)" }}
@@ -32,7 +44,7 @@ const Contact = () => {
         </Animate>
 
         <Animate
-          play
+          play={playAnimation}
           duration={1}
           delay={0}
           start={{ transform: "translateX(200px)" }}

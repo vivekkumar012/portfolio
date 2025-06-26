@@ -39,7 +39,7 @@ const About = () => {
         {/* Personal Info */}
         <div className="w-50% md:w-1/2">
           <Animate
-            play
+            play={playAnimation}
             duration={1.5}
             delay={1}
             start={{ transform: "translateX(-900px)" }}
@@ -81,7 +81,7 @@ const About = () => {
         {/* Rotating Services Circle */}
         <div className="w-full md:w-1/2 flex justify-center items-center mt-5 md:mt-0">
           <Animate
-            play
+            play={playAnimation}
             duration={1.5}
             delay={1}
             start={{ transform: "translateX(600px)" }}

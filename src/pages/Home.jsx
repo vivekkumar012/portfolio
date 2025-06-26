@@ -1,8 +1,21 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Animate } from "react-simple-animate";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function Home() {
+
+  const location = useLocation();
+      const [playAnimation, setPlayAnimation] = useState(false);
+    
+      useEffect(() => {
+        // Trigger animation whenever route is /about
+        setPlayAnimation(false);
+        const timer = setTimeout(() => setPlayAnimation(true), 10); // delay to re-trigger Animate
+        return () => clearTimeout(timer);
+      }, [location.pathname]); // runs when route changes
+
   const navigate = useNavigate();
 
   const handleNavigateToContactMePage = () => {
@@ -20,7 +33,7 @@ function Home() {
         </h1>
       </div>
       <Animate
-        play
+        play={playAnimation}
         duration={1.5}
         delay={1}
         start={{ transform: "translateY(550px)" }}

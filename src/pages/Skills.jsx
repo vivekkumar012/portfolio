@@ -46,7 +46,7 @@ const Skills = () => {
               <div className="w-full">
                 {item.data.map((skillItem, j) => (
                   <AnimateKeyframes
-                    play
+                    play={playAnimation}
                     duration={1}
                     keyframes={["opacity: 1", "opacity: 0"]}
                     iterationCount="1"
