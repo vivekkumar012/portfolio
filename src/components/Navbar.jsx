@@ -20,7 +20,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-yellow-theme-nav-bg h-[80px] flex items-center justify-between px-5 sticky top-0 z-50">
+    <nav className="bg-yellow-theme-nav-bg h-[80px] flex items-center justify-between px-5 sticky top-0 z-50 ">
       {/* Logo */}
       <div className="flex items-center">
         <Link to="/" className="text-yellow-theme-main cursor-pointer">

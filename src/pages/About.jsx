@@ -14,7 +14,7 @@ const personalDetails = [
 ];
 
 const jobSummary =
-  "Seasoned and independent Full Stack Developer with 1 year of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development, proactive feature optimization, and relentless debugging. Very passionate about making Backend as well as Frontend of any websites.";
+  "Seasoned and independent Full Stack Developer with 1 year of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development, proactive feature optimization, and relentless debugging. Very passionate about making Backend as well as Frontend of any websites. I solved Around 1000+ DSA Problems Across all the Platforms like LeetCode, CodeChef, CodeForces and GFG";
 
 const About = () => {
   return (

@@ -1,6 +1,6 @@
 import { Line } from "rc-progress";
 import React from "react";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { GiSkills } from "react-icons/gi";
 import { Animate, AnimateKeyframes } from "react-simple-animate";
 import { skillsData } from "../utils/utils";
 import PageHeaderContent from '../components/Pageheader'
@@ -10,10 +10,10 @@ const Skills = () => {
     <section id="skills" className="w-full px-5 py-8">
       <PageHeaderContent
         headerText="My Skills"
-        icon={<BsInfoCircleFill size={40} />}
+        icon={<GiSkills size={40} />}
       />
 
-      <div className="flex flex-col md:flex-row gap-6 mt-6">
+      <div className="flex flex-col md:flex-row gap-6 mt-8">
         {skillsData.map((item, i) => (
           <div key={i} className="flex flex-col items-center flex-1">
             <Animate
@@ -23,7 +23,7 @@ const Skills = () => {
               start={{ transform: "translateX(-200px)" }}
               end={{ transform: "translateX(0px)" }}
             >
-              <h3 className="relative inline-block text-yellow-main text-[22px] font-bold uppercase tracking-[0.5px] px-2 pb-1 border-b-2 border-yellow-main leading-4 mb-4">
+              <h3 className="relative inline-block text-yellow-main text-[22px] font-bold uppercase tracking-[0.5px] px-5 pb-1 border-solid border-b-2 border-yellow-main leading-4 mb-4">
                 {item.label}
                 {/* Simulating ::before and ::after with span */}
                 <span className="absolute left-0 bottom-[-1px] w-[2px] h-[5px] bg-yellow-main"></span>
@@ -45,9 +45,9 @@ const Skills = () => {
                       </p>
                       <Line
                         percent={skillItem.percentage}
-                        strokeWidth="2"
+                        strokeWidth="10"
                         strokeColor="var(--yellow-theme-main-color)"
-                        trailWidth="2"
+                        trailWidth="15"
                         strokeLinecap="square"
                       />
                     </div>
